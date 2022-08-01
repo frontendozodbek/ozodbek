@@ -1,0 +1,68 @@
+body{
+    background: rgb(29, 34, 78);
+}
+.wrapper{
+    display: flex;
+    margin: 50px 60px;
+    align-items: center;
+    transform: rotate(-30deg);
+}
+.kvadrat{
+    position: relative;
+    width: 130px;
+    height: 130px;
+    background-color: #fff;
+    animation-name: kvadrat;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+}
+@keyframes kvadrat{
+  0%{
+      left: 0;
+    z-index: 0;
+  }
+  50%{
+      left: 800px;
+      z-index: 0;
+  }
+  100%{
+      left: 0;
+    z-index: 3;
+    transform: rotate(360deg);
+  }
+}
+.circle{
+    position: relative;
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    background-color: rgb(29, 38, 38, 0.526);
+    z-index: 2;
+    backdrop-filter: blur(9px);
+    border: 1px solid #fff;
+}
+.mini-circle{
+    position: relative;
+    border-radius: 50%;
+    margin-top: 30px;
+    width: 100px;
+    height: 100px;
+    background-color: rgb(16, 218, 16);
+    animation-name: minicircle;
+    animation-iteration-count: infinite;
+    animation-duration: 2s;
+}
+@keyframes minicircle{
+    0%{
+        left: 0;
+        z-index: 3;
+    }
+    50%{
+        left: -800px;
+        z-index: 1;
+    }
+    100%{
+        left: 0;
+        z-index: 1;
+    }
+}
